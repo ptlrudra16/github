@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+int inst = 0;
+
+
+int main()
+{
+    // Fibonacci Iterative
+    int fibo;
+    inst++;
+    
+    cout << "Enter a number for fibonacci: ";
+    inst++;
+    
+    cin >> fibo;
+    inst++;
+    
+    int n1 = 0;
+    inst++;
+    int n2 = 1;
+    inst++;
+    
+    if(fibo==1){
+        cout << "Fibonacci series : " << n1;
+        inst++;
+        return 0;
+    }
+    else if(fibo == 0){
+        inst++;
+        return 0;
+    }
+    else {
+        cout << "Fibonacci series : " << n1 << " " << n2 << " ";
+        inst++;
+    }
+
+    for(int i=2; i<fibo; i++){
+        
+        int ans = n1+n2;
+        inst++;
+        
+        cout << ans << " ";
+        inst++;
+        
+        n1 = n2;
+        inst++;
+        
+        n2 = ans;
+        inst++;
+    }
+    
+    cout << "\nNumber of instructions: " << inst;
+
+    return 0;
+}
+

@@ -1,0 +1,38 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int inst = 0;
+
+int main()
+{
+    // Factorial Iterative
+    int fact;
+    cout << "Enter a number for factorial: ";
+    inst++;
+    
+    cin >> fact;
+    inst++;
+    
+    int ans=1;
+    
+    for(int i=fact; i>=1; i--){
+        
+        ans *= i;
+        inst++;
+    }  
+    
+    cout<<"Factorial of " << fact << " is " << ans << endl;
+    inst++;
+    cout << "Number of instructions: " << inst;
+
+    return 0;
+}
